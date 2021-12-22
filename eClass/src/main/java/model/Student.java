@@ -23,6 +23,20 @@ public class Student {
 		this.parent_email = parent_email;
 		this.password = password;
 	}
+	
+	public Student(String student_name, int student_class, Date dob, String image, long student_phoneno,
+			String student_email, String parent_name, long parent_phoneno, String parent_email) {
+		super();
+		this.student_name = student_name;
+		this.student_class = student_class;
+		this.dob = dob;
+		this.image = image;
+		this.student_phoneno = student_phoneno;
+		this.student_email = student_email;
+		this.parent_name = parent_name;
+		this.parent_phoneno = parent_phoneno;
+		this.parent_email = parent_email;
+	}
 
 	public String getStudent_email() {
 		return student_email;

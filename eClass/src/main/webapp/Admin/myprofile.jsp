@@ -33,56 +33,11 @@
 	<div id="wrapper">
 		<jsp:include page="header.jsp"></jsp:include>
 	</div>
-	<%
-			/* if(session.getAttribute("userEmail") == null){
-				response.sendRedirect("../login.jsp");
-			}
-			else{
-				int t=Integer.parseInt(session.getAttribute("userType").toString());
-				if(t != 1)
-					response.sendRedirect("../login.jsp");
-			} */
-	
-		%>
+
 
 	<br>
 	<br>
-	<%
 	
-	/* String mail=session.getAttribute("userEmail").toString(); 
-	
-	String fnm="",lnm="",id="",mno="",des="",img="../images/";
-
-	//if(uid==null)
-	//{
-		//response.sendRedirect("login.jsp");
-	//}
-	Data dt =new Data();
-	try
-	{
-		dt.st=dt.cn.createStatement();
-        String select="select * from user where email='"+mail+"' ";
-       
-        dt.rs=dt.st.executeQuery(select);
-        
-        while(dt.rs.next())
-        {
-	        img+=dt.rs.getString("id")+"-1.jpg";
-	        fnm=dt.rs.getString("fname");
-	        lnm=dt.rs.getString("lname");
-	        id=dt.rs.getString("id");
-	        mno=dt.rs.getString("mobileNo");
-	        des=dt.rs.getString("designation");
-        }
-        
-	}
-	catch(Exception ex)
-	{
-		System.out.println(ex);
-	} */
-	
-
-%>
 	<div id="popup1" class="overlay">
 		<div class="popup">
 			<a class="close" href="#" style="background-color: salmon">&times;</a>
@@ -136,7 +91,7 @@
 					<div class="card">
 						<div class="card-body">
 							<div class="d-flex flex-column align-items-center text-center">
-								<br> <img src="<%/* =img */%>" alt="Admin"
+								<br> <img src="../Assests/images/u1.png" alt="Admin"
 									class="rounded-circle" width="150">
 								<div class="mt-3">
 									<h4>

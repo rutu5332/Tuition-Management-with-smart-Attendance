@@ -48,7 +48,7 @@
 						<div class="row gutters-sm">
 						<h1 class="form-heading">ADD STUDENT</h1>
 							<div class="col-md-4 mb-3">
-								<img src="img/add.png" alt="image"
+								<img src="../Assests/img/add.png" alt="image"
 									style="height: 100%; width: 100%" /><br>
 								
 							</div>
@@ -58,7 +58,7 @@
 								<div class="card">
 									<div class="card-body">
 									 <!--  Add User Form -->
-										<form action="../AddUser" method="post" name="AddUserForm" enctype="multipart/form-data">
+										<form action="../AddStudent" method="post" name="AddUserForm" enctype="multipart/form-data">
 											
 
 											<div class="row mb-3" style="display: initial;">
@@ -78,7 +78,7 @@
 													<h5 class="mb-0">Class</h5>
 												</div>
 												<div class="col-sm-9 text-secondary">
-													<select class="form-control" id="user" name="user">
+													<select class="form-control" id="class" name="class">
 														<option value="0">-- Select --</option>
 														<option value="11">11</option>
 														<option value="12">12</option>
@@ -120,7 +120,18 @@
 													<span id="email-error" style="color:red; font-size:12px;"></span>
 												</div>
 											</div>
-		
+											
+											<div class="row mb-3" style="display: initial;">
+												<div class="col-sm-3">
+													<h5 class="mb-0">Parent's Name</h5>
+												</div>
+												<div class="col-sm-9 text-secondary">
+													<input type="text" class="form-control"
+														placeholder="Name *" name="pname" id="pname">
+													<span id="pname-error" style="color:red; font-size:12px;"></span>
+												</div>
+												
+											</div>
 															
 											<div class="row mb-3" style="display: initial;">
 												<div class="col-sm-3">

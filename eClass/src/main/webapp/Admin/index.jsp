@@ -126,7 +126,7 @@
 					<div class="col-lg-4 col-md-6 col-sm-6">
 						<div class="panel panel-default  box-white panel-status">
 							<div class="panel-body padding-none">
-								<a href="Teachers.jsp">
+								<a href="../TeacherDetails">
 									<div class="row">
 										<div class="col-xs-3">
 											<i class="fa fa-user fa-5x panel-status-icon"></i>
@@ -143,7 +143,7 @@
 					<div class="col-lg-4 col-md-6 col-sm-6">
 						<div class="panel panel-default box-white panel-status panel-info">
 							<div class="panel-body padding-none">
-								<a href="Students.jsp">
+								<a href="../StudentListController">
 									<div class="row">
 										<div class="col-xs-3">
 											<i class="fa fa-users fa-5x panel-status-icon"></i>

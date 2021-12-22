@@ -4,4 +4,62 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>AddTeacherController</servlet-name>
+  	<display-name>AddTeacherController</display-name>
+  	<description></description>
+  	<servlet-class>controllers.AddTeacherController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AddStudentController</servlet-name>
+  	<display-name>AddStudentController</display-name>
+  	<description></description>
+  	<servlet-class>controllers.AddStudentController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>TeachersListController</servlet-name>
+  	<display-name>TeachersListController</display-name>
+  	<description></description>
+  	<servlet-class>controllers.TeachersListController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>TeacherListController</servlet-name>
+  	<display-name>TeacherListController</display-name>
+  	<description></description>
+  	<servlet-class>controllers.TeacherListController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>StudentListController</servlet-name>
+  	<display-name>StudentListController</display-name>
+  	<description></description>
+  	<servlet-class>controllers.StudentListController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AssignmentListContoller</servlet-name>
+  	<display-name>AssignmentListContoller</display-name>
+  	<description></description>
+  	<servlet-class>controllers.AssignmentListContoller</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AddTeacherController</servlet-name>
+  	<url-pattern>/AddTeacher</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddStudentController</servlet-name>
+  	<url-pattern>/AddStudent</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>TeacherListController</servlet-name>
+  	<url-pattern>/TeacherDetails</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>StudentListController</servlet-name>
+  	<url-pattern>/StudentListController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AssignmentListContoller</servlet-name>
+  	<url-pattern>/TodayAssignment</url-pattern>
+  </servlet-mapping>
+  
+  
 </web-app>

@@ -9,6 +9,27 @@ public class Teacher {
     private long phone_no;
     private String email;
     private String password;
+    
+    
+    
+	public Teacher(String teacher_name, String subject, Date dOB, long phone_no, String email, String password) {
+		super();
+		this.teacher_name = teacher_name;
+		this.subject = subject;
+		DOB = dOB;
+		this.phone_no = phone_no;
+		this.email = email;
+		this.password = password;
+	}
+	
+	public Teacher(String teacher_name, String subject, Date dOB, long phone_no, String email) {
+		this.teacher_name = teacher_name;
+		this.subject = subject;
+		DOB = dOB;
+		this.phone_no = phone_no;
+		this.email = email;
+	}
+
 	public int getTeacher_id() {
 		return teacher_id;
 	}

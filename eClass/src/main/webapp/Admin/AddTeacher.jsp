@@ -48,7 +48,7 @@
 						<div class="row gutters-sm">
 						<h1 class="form-heading">ADD TEACHER</h1>
 							<div class="col-md-4 mb-3">
-								<img src="img/add.png" alt="image"
+								<img src="../Assests/img/add.png" alt="image"
 									style="height: 100%; width: 100%" /><br>
 								
 							</div>
@@ -58,7 +58,7 @@
 								<div class="card">
 									<div class="card-body">
 									 <!--  Add User Form -->
-										<form action="../AddUser" method="post" name="AddUserForm" enctype="multipart/form-data">
+										<form action="../AddTeacher" method="post" name="AddUserForm" >
 											
 
 											<div class="row mb-3" style="display: initial;">

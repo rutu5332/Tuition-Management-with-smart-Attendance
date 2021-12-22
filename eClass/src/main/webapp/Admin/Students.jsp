@@ -1,4 +1,6 @@
-
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="model.Student"%>
+<%@page import="java.util.* "%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,44 +82,50 @@
 										<tr>
 											<th style="text-align:center;">#</th>
 											<th style="text-align:center;">Image</th>
-											<th style="text-align:center;">First Name</th>
-											<th style="text-align:center;">Last Name</th>
+											<th style="text-align:center;">Name</th>
+											<th style="text-align:center;">Class</th>
 											<th style="text-align:center;">Email</th>
 											<th style="text-align:center;">Mobile</th>
-											<th style="text-align:center;">Gender</th>
+											<th style="text-align:center;">DOB</th>
+											<th style="text-align:center;">Parent Name</th>
+											<th style="text-align:center;">Parent Email</th>
+											<th style="text-align:center;">Parent Mobile</th>
 											
 										</tr>
 									</thead>
 									<tbody>
-										<%
-									   	  /* Data dt = new Data();
-									   	  dt.st = dt.cn.createStatement();
-									   	  String sql = "select * from user where type=3";
-									   	  dt.rs= dt.st.executeQuery(sql);
-									   	  String img;
-									   	  int i=1;
-									   	  while(dt.rs.next()){
-									   		  out.println("<tr> <td>" + i++ + "</td>");
-									   		  img= "../images\\"+dt.rs.getString("id") + "-1.jpg";
-											  out.println("<td> <img src=' " +img+ "' style=\"height:25px;width:30px;\"></td>");
-									   		  out.println("<td>" + dt.rs.getString("fname") + "</td>");
-										   	  out.println("<td>" + dt.rs.getString("lname") + "</td>");
-										   	  out.println("<td>" + dt.rs.getString("email") + "</td>");
-										   	  out.println("<td>" + dt.rs.getString("mobileNo") + "</td>");
-										   	  out.println("<td>" + dt.rs.getString("gender") + "</td>");
-										   	  out.println("</tr>");
-										   	  //i++;
-									   	  }
-									   	  dt.st.close();
-									   	  dt.cn.close();
-									   	  dt.rs.close(); */
-									   	 
-									   
-									   %>
+									<%
+										 int i=1;
+										 if(session.getAttribute("result") != null){
+											ArrayList<Student> list = (ArrayList<Student>)session.getAttribute("result");
+											//session.removeAttribute("result");
+											for (Student a : list){
+												SimpleDateFormat format = new SimpleDateFormat("dd/MMM/yyyy");
+												String date = format.format(a.getDob());
+											%>
+										<tr>
+											<td><%=i++ %></td>
+											<td><img src="../Assests/images/<%=a.getImage() %>"  style="height:25px;width:30px;"></td>
+											<td><%=a.getStudent_name() %></td>
+											<td><%=a.getStudent_class() %></td>
+											<td><%=a.getStudent_email() %></td>
+											<td><%=a.getStudent_phoneno() %></td>
+											<td><%=date %></td>
+											<td><%=a.getParent_name() %></td>
+											<td><%=a.getParent_email() %></td>
+											<td><%=a.getParent_phoneno() %></td>
+											
+										</tr>
+										<% 
+											}
+										}
+										
+										
+									%>
 
 									</tbody>
 								</table>
-							</div>
+							</x>
 							<!-- /.table-responsive -->
 						</div>
 						<!-- /.panel-body -->
@@ -149,10 +157,10 @@
 
 	<!-- Page-Level Demo Scripts - Tables - Use for reference -->
 	<script>
-		$(document).ready(function() {
-			$('#dataTables-example').dataTable();
-		});
-	</script>
+            $(document).ready(function() {
+                $('#dataTables-example').dataTable();
+            });
+        </script>
 </body>
 
 

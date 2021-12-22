@@ -1,4 +1,6 @@
-
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="model.Teacher"%>
+<%@page import="java.util.* "%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,17 +41,7 @@
 <body>
 	<div id="wrapper">
 		<jsp:include page="header.jsp"></jsp:include>
-		<%
-			/* if(session.getAttribute("userEmail") == null){
-				response.sendRedirect("../login.jsp");
-			}
-			else{
-				int t=Integer.parseInt(session.getAttribute("userType").toString());
-				if(t != 1)
-					response.sendRedirect("../login.jsp");
-			} */
-	
-		%>
+		
 		<div id="page-wrapper">
 
 			<div class="row">
@@ -82,38 +74,40 @@
 									<thead>
 										<tr>
 											<th style="text-align:center;">#</th>
-											<th style="text-align:center;">Image</th>
-											<th style="text-align:center;">First Name</th>
-											<th style="text-align:center;">Last Name</th>
+											<th style="text-align:center;">Name</th>
+											<th style="text-align:center;">Subject</th>
+											<th style="text-align:center;">DOB</th>
 											<th style="text-align:center;">Email</th>
 											<th style="text-align:center;">Mobile</th>
-											<th style="text-align:center;">Gender</th>
+											
 										</tr>
 									</thead>
 									<tbody>
-									   <%
-									   	 /*  Data dt = new Data();
-									   	  dt.st = dt.cn.createStatement();
-									   	  String sql = "select * from user where type=2";
-									   	  dt.rs= dt.st.executeQuery(sql);
-									   	  String img;
-									   	  int i=1;
-									   	  while(dt.rs.next()){
-									   		  out.println("<tr> <td>" + i++ + "</td>");
-										   	  img= "../images\\"+dt.rs.getString("id") + "-1.jpg";
-											  out.println("<td> <img src=' " +img+ "' style=\"height:25px;width:30px;\"></td>");
-									   		  out.println("<td>" + dt.rs.getString("fname") + "</td>");
-										   	  out.println("<td>" + dt.rs.getString("lname") + "</td>");
-										   	  out.println("<td>" + dt.rs.getString("email") + "</td>");
-										   	  out.println("<td>" + dt.rs.getString("mobileNo") + "</td>");
-										   	  out.println("<td>" + dt.rs.getString("gender") + "</td> </tr>");
-										   	 
-									   	  }
-									   	  dt.st.close();
-									   	  dt.cn.close();
-									   	  dt.rs.close(); */
-									  	  
-									   %>
+									<%
+										 int i=1;
+										 if(session.getAttribute("result") != null){
+											ArrayList<Teacher> list = (ArrayList<Teacher>)session.getAttribute("result");
+											//session.removeAttribute("result");
+											for (Teacher a : list){
+												SimpleDateFormat format = new SimpleDateFormat("dd/MMM/yyyy");
+												String date = format.format(a.getDOB());
+											%>
+											<tr>
+												<td><%=i++ %></td>
+												<td><%=a.getTeacher_name() %></td>
+												<td><%=a.getSubject() %></td>
+												<td><%=date %></td>
+												<td><%=a.getEmail() %></td>
+												<td><%=a.getPhone_no() %></td>
+												
+											</tr>
+											<% 
+											}
+										}
+										
+										
+									%>
+									   
 										
 										
 									</tbody>
