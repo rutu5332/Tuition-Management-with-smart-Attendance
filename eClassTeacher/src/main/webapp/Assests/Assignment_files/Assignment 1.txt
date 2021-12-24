@@ -1,0 +1,81 @@
+Notes:
+1. All public functions of a class, combined togeghter, define the behavior of all its objects at runtime
+2. The member variables defined in the class represent the state of its objects at runtime.
+3. There can be many objects created from a class. Each object is independent from each other.
+4. Every object has a state at runtime during whole of its lifetime. This state is represented by the values of member variables defined in the class.
+5. A class can have another class type as member variable if required to represent the concept correctly. Eg. A car class will have Engine as member variable. Engine is defined as a separate class.
+
+Rules:
+1. Expose a function (i.e. make it public) only if it surely contributes to fulfilling behavior of the class
+2. The state of the object should never be exposed as such by a class - i.e. never expose member variables of a class as public
+3. State of the object should always be consistent throughout its lifetime. Consistent means the member variables of object should have valid values. Which values are valid depend upon the scenario we are trying to solve in software.
+4. Adhere to the 'D' in SOLID principles of modern software programming.
+5. Write unit tests for every class.
+
+Exercises:
+1. Create a class Box with following functionality: The users of Box objects should be able to 
+- set the dimensions to any __valid__ values. Eg. any positive numbers are valid, but negatives not.
+- get the volume calculated by the box. volume() function does not change the state of the object. How do you ensure this in code?
+- get the total surface area of the box by invoking its surfaceArea() method. It is a box that is going to be closed from all sides after packaging is complete
+
+2. Create a class called Order. It is in context of making boxes for class Box. It takes data from orders.txt file. The orders.txt file has data like the following:
+6.0 8.0 4.0 5 101
+7.6 3.1 4.5 3 115
+...
+The first 3 numbers are dimensions of the box, next unsigned number (5 in first line) is the quantity or number of boxes to be built for that dimension and last unsigned integer is the code of color that the box should be painted with. You can imagine codes yourself. Like, starting 100 - Red, 101 - Green, 102 - Orange etc.
+The Order class should have createOrders(path to orders.txt) function. Invoking this function means Order object reads data from orders.txt.
+The Order class should have another function called getOrders() which returns all orders in an approprate collection.
+The Order class should have another function called totalQuantity() which returns sum of quantities of all orders to be made.
+
+2. Create a class called BoxMaker which is responsible for creating Box objects of dimensions and quantities given by the collection returned by Order object.
+Public functions:
+setCostPerUnitVolume() - user of BoxMaker can set the rate of building a box per unit volume
+takeOrder(collection returned by Order class)
+buildBoxes() - returns objects of Box class matching the orders
+totalCost() - returns total cost of boxes built in an order. Should return 0 if the order is not processed yet.
+Note that BoxMaker does not need to know the color code of the Box.
+
+3. Create a class called BoxPainter which is responsible for painting the box. You can imagine that we are creating boxes made of metal like tin or aluminium. The BoxPainter takes a collection of boxes of type Box and color and paints it with that color. Modify the Box class to have a property called color. Painting a box has a cost. So, just like BoxMaker, BoxPainter should also have mechanism to set cost per unit surface area and totalCost() should return the cost of paiting the current order.
+
+4. Now imagine that there is assembly line that manufactures boxes and paints them. A box of given dimension and color is the output of the assembly line. This assembly line could be part of a large manufacturing factory that manufactures other things fit for packaging in these boxes.
+To model this assembly line, we need the classes we have defined above.
+Now create a class called AssemblyLine which drives the whole process: Broadly,
+- It creates Order object by passing it path to the orders.txt
+- It creates BoxMaker and passes it the collection. Think if it is valuable to remove color info from the collection passed to BoxMaker. If so, AssemblyLine does this work - removing the color info.
+- It creates BoxPainter and gets the box painted.
+- It is also responsible for outputing data to console. No other class talks to console.
+The output should be like:
+New order received 
+Manufacturing 120 boxes
+
+Phase 1: Building 120 boxes
+Box building completed
+Total cost of box building is INR 25,000
+
+Phase 2: Painting 120 boxes
+Painting boxes completed
+Total cost of painting is INR 35,000
+
+Order completed
+Total production cost INR 60,000
+Total volume created 78900 cubic meters
+Total paint surface area 289439 square meters
+Color --- Boxes
+RosePink 		10
+StrawberryPink		20
+BabyPink		5
+HotPink
+SalmonPink
+CoralPink
+BlushPink
+RosewoodPink
+MagentaPink
+BubblegumPink
+FlamingoPink
+PeachPink
+PastelPink
+DeepPink
+BarbiePink
+MillennialPink
+
+																																																																																																																																																																	
