@@ -1,6 +1,8 @@
-
 <%@page import="java.text.SimpleDateFormat"%>
-<%@page import="java.util.*"%>
+<%@page import="model.Student"%>
+<%@page import="model.Attendance"%>
+<%@page import="java.util.* "%>
+
 
 <!DOCTYPE html>
 <html>
@@ -96,38 +98,40 @@
 											<th style="text-align: center;">#</th>
 											<th style="text-align: center;">Image</th>
 											<th style="text-align: center;">Name</th>
-											<th style="text-align: center;">Designation</th>
+											<th style="text-align: center;">class</th>
+											<th style="text-align: center;">Email</th>
 											<th style="text-align: center;">In Time</th>
-											<th style="text-align: center;">Out Time</th>
 										</tr>
 									</thead>
 									<tbody>
-										<%
-											/* SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
-											String strDate = fmt.format(new Date());
-											Data dt = new Data();
-											dt.st = dt.cn.createStatement();
-											String sql = "select * from attendance a inner join user u on a.uid = u.id";
-											dt.rs = dt.st.executeQuery(sql);
-											String img;
-											int i = 1;
-											while (dt.rs.next()) {
-												if (strDate.equals(dt.rs.getString("attdate"))) {
-													out.println("<tr> <td>" + i++ + "</td>");
-													img= "../images\\"+dt.rs.getString("id") + "-1.jpg";
-													out.println("<td> <img src=' " +img+ "' style=\"height:25px;width:30px;\"></td>");
-													out.println("<td>" + dt.rs.getString("fname") + " " + dt.rs.getString("lname") + "</td>");
-													out.println("<td>" + dt.rs.getString("designation") + "</td>");
-													out.println("<td>" + dt.rs.getString("inTime") + "</td>");
-													out.println("<td>" + (dt.rs.getString("outTime") == null ? "-" : dt.rs.getString("outTime"))
-															+ "</td> </tr>");
-												}
-
+									<%
+										 int i=1;
+										 if(session.getAttribute("result") != null){
+											HashMap<Student,Attendance> list = (HashMap<Student,Attendance>)session.getAttribute("result");
+											//session.removeAttribute("result");
+											for (Map.Entry<Student,Attendance> e : list.entrySet())
+											{
+												Student s=e.getKey();
+												Attendance a =e.getValue();
+												
+											%>
+										<tr>
+											<td><%=i++ %></td>
+											<td><img src="../Assests/images/<%=s.getImage() %>"  style="height:25px;width:30px;"></td>
+											<td><%=s.getStudent_name() %></td>
+											<td><%=s.getStudent_class() %></td>
+											<td><%=s.getStudent_email() %></td>
+											
+											<td><%=a.getIntime() %></td>
+											
+										</tr>
+										<% 
 											}
-											dt.st.close();
-											dt.cn.close();
-											dt.rs.close(); */
-										%>
+										}
+										
+										
+									%>
+										
 
 									</tbody>
 								</table>

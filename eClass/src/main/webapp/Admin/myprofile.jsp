@@ -91,18 +91,16 @@
 					<div class="card">
 						<div class="card-body">
 							<div class="d-flex flex-column align-items-center text-center">
-								<br> <img src="../Assests/images/u1.png" alt="Admin"
+								<br> <img src="../Assests/img/u1.png" alt="Admin"
 									class="rounded-circle" width="150">
 								<div class="mt-3">
 									<h4>
-										<%/* out.println(fnm ); */%>
+										Meha
 									</h4>
 
 									<br>
 									
-									<button class="b1 btn btn-primary"
-										onclick="location.href ='#popup1' ">Change Profile
-										Picture</button>
+									
 									<br> <br>
 								</div>
 							</div>
@@ -118,7 +116,7 @@
 									<h5 class="mb-0">Id</h5>
 								</div>
 								<div class="col-sm-9 text-secondary">
-									231
+									1001
 								</div>
 							</div>
 							<hr>
@@ -127,7 +125,7 @@
 									<h5 class="mb-0">Full Name</h5>
 								</div>
 								<div class="col-sm-9 text-secondary">
-									Fname
+									Meha Vora
 								</div>
 							</div>
 							<hr>
@@ -136,7 +134,7 @@
 									<h5 class="mb-0">Email</h5>
 								</div>
 								<div class="col-sm-9 text-secondary">
-									email@gmail.com
+									meha13@gmail.com
 								</div>
 							</div>
 							<hr>
@@ -146,7 +144,7 @@
 									<h5 class="mb-0">Mobile</h5>
 								</div>
 								<div class="col-sm-9 text-secondary">
-									9999999999
+									9856985698
 								</div>
 							</div>
 
@@ -154,11 +152,7 @@
 							<div class="row">
 								<div class="col-sm-12">
 
-									<button class="btn btn-primary"
-										onclick="location.href ='updateprofile.jsp'">UpdateProfile</button>
-									<!--  <button class="btn btn-primary"
-										onclick="location.href ='monthlyattendance.jsp'">Monthly
-										Attendance</button> -->
+									
 								</div>
 							</div>
 						</div>

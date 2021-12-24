@@ -18,6 +18,11 @@ public class Attendance {
 	public void setAttendance_date(Date attendance_date) {
 		this.attendance_date = attendance_date;
 	}
+	public Attendance(Date attendance_date, Time intime) {
+		super();
+		this.attendance_date = attendance_date;
+		this.intime = intime;
+	}
 	public Time getIntime() {
 		return intime;
 	}

@@ -31,7 +31,7 @@
 									<a href="index.jsp"><img src="Assests/img/logo.png" alt="logo" class="logo"></a>
 								</div>
 								<p class="login-card-description">Sign into your account</p>
-								<form action="Login" name="loginform" id="loginform"
+								<form action="LoginController" name="loginform" id="loginform"
 									method="post">
 									<div class="form-group">
 

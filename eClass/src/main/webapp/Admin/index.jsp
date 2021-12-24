@@ -161,7 +161,7 @@
 						<div
 							class="panel panel-default  box-white panel-status panel-warning">
 							<div class="panel-body padding-none">
-								<a href="Attendance.jsp">
+								<a href="../TodayAssignment">
 									<div class="row">
 										<div class="col-xs-3">
 											<i class="fa fa-bar-chart-o fa-5x panel-status-icon"></i>

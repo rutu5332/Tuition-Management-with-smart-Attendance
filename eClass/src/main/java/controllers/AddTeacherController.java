@@ -37,7 +37,7 @@ public class AddTeacherController extends HttpServlet {
 			TeacherDAO teacherDAO = new TeacherDAO();
 			
 			if(teacherDAO.addTeacher(t) )
-				response.sendRedirect("Admin/TeacherDetails");
+				response.sendRedirect("Admin/index.jsp");
 			else
 				System.out.println("ERROR");
 			
