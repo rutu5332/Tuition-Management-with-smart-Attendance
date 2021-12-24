@@ -1,0 +1,69 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+  
+<web-app>
+
+  <display-name>Archetype Created Web Application</display-name>
+  
+  <servlet>
+  	<servlet-name>StudentController</servlet-name>
+  	<display-name>StudentController</display-name>
+  	<description></description>
+  	<servlet-class>controller.StudentController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AssignmentController</servlet-name>
+  	<display-name>AssignmentController</display-name>
+  	<description></description>
+  	<servlet-class>controller.AssignmentController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>StudyMaterialController</servlet-name>
+  	<display-name>StudyMaterialController</display-name>
+  	<description></description>
+  	<servlet-class>controller.StudyMaterialController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>QuizController</servlet-name>
+  	<display-name>QuizController</display-name>
+  	<description></description>
+  	<servlet-class>controller.QuizController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AnnouncementController</servlet-name>
+  	<display-name>AnnouncementController</display-name>
+  	<description></description>
+  	<servlet-class>controller.AnnouncementController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LoginController</servlet-name>
+  	<display-name>LoginController</display-name>
+  	<description></description>
+  	<servlet-class>controller.LoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>StudentController</servlet-name>
+  	<url-pattern>/StudentController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AssignmentController</servlet-name>
+  	<url-pattern>/AssignmentController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>StudyMaterialController</servlet-name>
+  	<url-pattern>/StudyMaterialController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>QuizController</servlet-name>
+  	<url-pattern>/QuizController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AnnouncementController</servlet-name>
+  	<url-pattern>/AnnouncementController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LoginController</servlet-name>
+  	<url-pattern>/LoginController</url-pattern>
+  </servlet-mapping>
+  </web-app>

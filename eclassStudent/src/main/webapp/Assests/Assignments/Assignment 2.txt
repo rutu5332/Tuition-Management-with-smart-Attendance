@@ -1,0 +1,31 @@
+1. Create a class that can represent complex numbers. Like regular numbers, the user of this class will expect many operations to "just work". Assuming CN is the name of the class,
+CN c1(2,4); 	// should create complex number with 2 as its real part and 4 as its imaginary part
+
+CN c2(4,5);
+CN c3(c1);
+CN c4("5+i6"); // and all variants like " 5+ i6", "5 + i6" etc. should work. But implement this in the last after implementing rest of the class.
+
+CN c5;	// should create 0+i0;
+c5 = c1+c2;
+c5 = c1-c2;
+c5 = c1 + 5;	//and with - sign
+c5 = 5 + c1;	// and with - sign
+c5 += 5;
+c5 -= 2;
+c5++;	// increment both real and imaginary parts by 1
+c5--;
+c5 = c1*c2;
+
+For the operations that don't have direct operators, like raising the power, you can write public function, like pow(uint) for power.
+
+This exercise is meant for you to completely understand operator overloading and appreciate that using operator overloading in class makes it much simple for its users to use it.
+
+2. Create class CNArray which can work like an array of complex numbers. It can be used to add and remove CN objects to it and supports accessing the elements using [] notation. eg:
+CNArray arr;
+arr.push_back(c1);
+arr.push_back(c2);
+arr.push_back(c3);
+display(arr[2]);	// assuming display() function takes a CN and displays it in x+iy format
+The main purpose of this exercise is to know how a class can overload indexing operator ([]), so implement only code which works meeting this objective.
+
+3. Create a 'String' class that manages characters in free store and provides functionality like a string class (of c# or java or std::string in c++). Try providing as many overloads as you think will be useful when someone is using your String class.
